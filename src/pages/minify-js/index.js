@@ -15,14 +15,15 @@ const Minifyjs = () => {
   const onConvert = async () => {
     if(validate_fields()){
       setLoading(true);
+      
       let data = {
           js: noformat
       }
       let response_minify = await minify_service.minify_js(data);
       if(!response_minify.erro){
           setFormatted(JSON.stringify(response_minify.data));
-          setLoading(false);
       }
+      setLoading(false);
     }
   }
 

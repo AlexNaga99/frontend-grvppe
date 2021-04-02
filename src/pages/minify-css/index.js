@@ -14,14 +14,15 @@ const Minifycss = () => {
   const onConvert = async () => {
     if(validate_fields()){
       setLoading(true);
+      
       let data = {
           css: noformat
       }
       let response_minify = await minify_service.minify_css(data);
       if(!response_minify.erro){
           setFormatted(JSON.stringify(response_minify.data));
-          setLoading(false);
       }
+      setLoading(false);
     }
   }
 

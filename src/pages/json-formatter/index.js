@@ -1,18 +1,30 @@
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Input, Button, message, Spin } from 'antd';
-import { InboxOutlined } from '@ant-design/icons';
+import { json_formatter_service } from '../../services/json_formatter';
 import 'antd/dist/antd.css';
 const { TextArea } = Input;
 
 const JsonFormatter = () => {
 
   const [ noformat, setNoFormat ] = useState();
+  const [ formatted, setFormatted ] = useState();
   const [ loading, setLoading ] = useState(false);
 
   const onConvert = async () => {
     if(validate_fields()){
-     console.log(noformat);
+      setLoading(true);
+
+      let data = {
+        json: noformat
+      }
+      let formated = await json_formatter_service.json_formatter(data);
+      let json_formated = formated.data.data.result;
+      
+      if(json_formated){
+        setFormatted(json_formated);
+      }
+      setLoading(false);
     }
   }
 
@@ -55,7 +67,7 @@ const JsonFormatter = () => {
                 <h2 style={{ textAlign: "center" }}>Formatado:</h2>
               </div>
               <div class="bd-highlight">
-                <TextArea rows={25} style={{ width: "100%", resize: "none" }}/>
+                <TextArea rows={25} style={{ width: "100%", resize: "none" }} value={formatted}/>
               </div>
             </div>
           </div>
