@@ -19,6 +19,7 @@ const AppLayout = ({ component: Component, ...rest }) => {
         <Header className="header">
           <p style={{ color: "white", fontFamily: 'Montserrat', fontSize: '25px', textAlign: 'left' }}>Convertme</p>
           <div className="logo" />
+          <img src="../../assets/logo-convertme.png" alt="logo-convertme"/>
         </Header>
         <Layout>
           <Sider width={200} className="site-layout-background">
