@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import AppLayout from './components/layout';
 import './App.css';
-import ConvertImage from './pages/convert-image';
-import ConvertVideo from './pages/convert-video';
-import ConvertDocument from './pages/convert-documents';
+import JsonFormatter from './pages/json-formatter';
+import Minifycss from './pages/minify-css';
+import Minifyjs from './pages/minify-js';
 import Distance from './pages/distance';
 import Currencies from './pages/currencies';
 import Temperature from './pages/temperature';
@@ -14,18 +14,18 @@ import Home from './pages/home';
 const App = () => {
   return (
     <Router>   
-      <Redirect to="/"/>
+      {/* <Redirect to="/"/> */}
       <Route path="/">
         <AppLayout exact path="/" component={Home}/>
       </Route>
-      <Route path="/convert-image">
-        <AppLayout exact path="/convert-image" component={ConvertImage}/>
+      <Route path="/minify-css">
+        <AppLayout exact path="/minify-css" component={Minifycss}/>
       </Route>
-      <Route path="/convert-videos">
-        <AppLayout exact path="/convert-videos" component={ConvertVideo}/>
+      <Route path="/minify-js">
+        <AppLayout exact path="/minify-js" component={Minifyjs}/>
       </Route>
-      <Route path="/convert-documents">
-        <AppLayout exact path="/convert-documents" component={ConvertDocument}/>
+      <Route path="/json-formatter">
+        <AppLayout exact path="/json-formatter" component={JsonFormatter}/>
       </Route>
       <Route path="/currencies">
         <AppLayout exact path="/currencies" component={Currencies}/>
