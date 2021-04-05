@@ -4,3 +4,13 @@
     background: #b20835 !important;
     padding: 0 20px !important;
 }
+.logo-icon:hover{
+    color: transparent;
+    text-decoration: none;
+}
+.ant-layout-sider {
+    background: unset !important;
+}
+.ant-layout-sider-trigger{
+    background: #b20835 !important;
+}

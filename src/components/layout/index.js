@@ -1,6 +1,5 @@
-import React from "react";
-import { Layout, Menu, Breadcrumb } from 'antd';
-import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
+import React, { useState } from "react";
+import { Layout, Menu } from 'antd';
 import { Link, Route } from "react-router-dom";
 import './style.css';
 
@@ -9,20 +8,25 @@ const { SubMenu } = Menu;
 
 const AppLayout = ({ component: Component, ...rest }) => {
 
-  // const onSelect = ({ key, history }) => {
-  //   history.push(key);
-  // }
+  const [collapsed, setCollapsed] = useState();
 
+  const onCollapse = collapsed => {
+    setCollapsed(collapsed);
+  };
+  
   return (
     <Route path="/" {...rest} render={matchProps => (
       <Layout style={{ minHeight: '100vh' }}>
         <Header className="header">
-          <p style={{ color: "white", fontFamily: 'Montserrat', fontSize: '25px', textAlign: 'left' }}>Convertme</p>
-          <div className="logo" />
-          <img src="../../assets/logo-convertme.png" alt="logo-convertme"/>
+          {/* <div className="logo" /> */}
+          {/* <img src=""></img> */}
+          <div className="d-flex justify-content-start align-items-center">
+            <a href="http://localhost:3000/"><img src="../../logo-convertme.png" alt="logo-convertme" width="50px" height="50px"/></a>
+            <a href="http://localhost:3000/" className="logo-icon"><p style={{ color: "white", fontFamily: 'Montserrat', fontSize: '25px', textAlign: 'left', margin: 'unset' }}>Convertme</p></a>
+          </div>
         </Header>
         <Layout>
-          <Sider width={200} className="site-layout-background">
+          <Sider width={200} className="site-layout-background" collapsible collapsed={collapsed} onCollapse={onCollapse}>
           <Menu mode="inline" style={{ height: '100%', borderRight: 0 }}>
              <SubMenu key="sub1" title="Converter">
                <Menu.Item key="1"><Link to="minify-js">Minificação js</Link></Menu.Item>
