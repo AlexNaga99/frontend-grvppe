@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import 'antd/dist/antd.css';
 import { Select, InputNumber } from 'antd';
 import { currency_service } from '../../services/currencies';
+import './style.css';
 
 const { Option } = Select;
 
@@ -45,8 +46,8 @@ const Currencies = () => {
       <div class="d-flex justify-content-center" style={{ paddingBottom: "20px" }}>
         <h2>Conversão de Moedas</h2>
       </div>
-      <div class="d-flex justify-content-center" style={{ paddingBottom: "20px" }}>
-        <div class="d-flex justify-content-center" style={{ width: "30%" }}>
+      <div class="resize d-flex justify-content-center" style={{ paddingBottom: "20px" }}>
+        <div class="resize-width d-flex justify-content-center" style={{ width: "30%" }}>
           <Select
             showSearch
             style={{ width: 200 }}
@@ -89,7 +90,7 @@ const Currencies = () => {
             <Option value="MYR">Ringgit da Malásia - MALÁSIA</Option>
           </Select>
         </div>
-        <div class="d-flex justify-content-center" style={{ width: "30%" }}>
+        <div class="resize-width d-flex justify-content-center" style={{ width: "30%" }}>
           <InputNumber
             placeholder='Valor'
             onChange={(value) => calculate(value)}
@@ -98,10 +99,10 @@ const Currencies = () => {
             step={0.01}
             style={{ width: "90%", height: "80%" }} />
         </div>
-        <div class="d-flex justify-content-center" style={{ width: "10%" }}>
+        <div class="resize-width d-flex justify-content-center" style={{ width: "10%" }}>
           <p>para</p>
         </div>
-        <div class="d-flex justify-content-center" style={{ width: "30%" }}>
+        <div class="resize-width d-flex justify-content-center" style={{ width: "30%" }}>
           <Select
             showSearch
             style={{ width: 200 }}

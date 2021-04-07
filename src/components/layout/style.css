@@ -14,3 +14,8 @@
 .ant-layout-sider-trigger{
     background: #b20835 !important;
 }
+@media only screen and (max-width: 750px) {
+    .blur{
+        filter: blur(1rem);
+    }
+}

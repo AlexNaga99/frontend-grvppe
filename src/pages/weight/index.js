@@ -1,9 +1,10 @@
 
 import React, { useState } from "react";
 import 'antd/dist/antd.css';
-import { Select, message, InputNumber } from 'antd';
+import { Select, InputNumber } from 'antd';
 import { weight_service } from '../../services/weight';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './style.css';
 
 const { Option } = Select;
 
@@ -51,8 +52,8 @@ const Weight = () => {
       <div class="d-flex justify-content-center" style={{ paddingBottom: "20px" }}>
         <h2>Conversão de peso</h2>
       </div>
-      <div class="d-flex justify-content-center" style={{ paddingBottom: "20px" }}>
-        <div class="d-flex justify-content-center" style={{ width: "30%" }}>
+      <div class="resize d-flex justify-content-center" style={{ paddingBottom: "20px" }}>
+        <div class="resize-width d-flex justify-content-center" style={{ width: "30%" }}>
           <Select
             showSearch
             style={{ width: 200 }}
@@ -70,7 +71,7 @@ const Weight = () => {
               <Option value="mg">Miligrama - mg</Option>
           </Select>
         </div>
-        <div class="d-flex justify-content-center" style={{ width: "30%" }}>
+        <div class="resize-width d-flex justify-content-center" style={{ width: "30%" }}>
           <InputNumber
               placeholder='Peso'
               onChange={(value) => calculate(value)}
@@ -79,10 +80,10 @@ const Weight = () => {
               step={0.01}
               style={{ width: "90%", height: "80%" }}/>
         </div>
-        <div class="d-flex justify-content-center" style={{ width: "10%" }}>
+        <div class="resize-width d-flex justify-content-center" style={{ width: "10%" }}>
           <p>para</p>
         </div>
-        <div class="d-flex justify-content-center" style={{ width: "30%" }}>
+        <div class="resize-width d-flex justify-content-center" style={{ width: "30%" }}>
           <Select
             showSearch
             style={{ width: 200 }}

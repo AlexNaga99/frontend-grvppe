@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Input, Button, message, Spin } from 'antd';
 import { minify_service } from '../../services/minify';
 import 'antd/dist/antd.css';
+import './style.css';
 const { TextArea } = Input;
 
 const Minifycss = () => {
@@ -44,8 +45,8 @@ const Minifycss = () => {
         <div class="d-flex justify-content-center" style={{ paddingBottom: "20px" }}>
           <h1>Minificação CSS</h1>
         </div>
-        <div class="d-flex justify-content-between" style={{ paddingBottom: "20px" }}>
-          <div class="d-flex justify-content-center" style={{ width: "43%" }}>
+        <div class="resize d-flex justify-content-between" style={{ paddingBottom: "20px" }}>
+          <div class="resize-content d-flex justify-content-center" style={{ width: "43%" }}>
             <div class="d-flex flex-column bd-highlight" style={{ width: "100%" }}>
               <div class="bd-highlight">
                 <h2 style={{ textAlign: "center" }}>Sem minificação:</h2>
@@ -56,10 +57,10 @@ const Minifycss = () => {
             </div>
           </div>
           
-          <div class="d-flex align-items-end" style={{ width: "auto" }}>
-            <Button onClick={onConvert}>Converter</Button>
+          <div class="d-flex align-items-end justify-content-center" style={{ width: "auto" }}>
+            <Button onClick={onConvert} style={{ color: "white", background: "#b20835", padding: "0 25px"}}>Converter</Button>
           </div>
-          <div class="d-flex justify-content-center" style={{ width: "43%" }}>
+          <div class="resize-content d-flex justify-content-center" style={{ width: "43%" }}>
             <div class="d-flex flex-column bd-highlight" style={{ width: "100%" }}>
               <div class="bd-highlight">
                 <h2 style={{ textAlign: "center" }}>Minificado:</h2>
