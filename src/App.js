@@ -9,6 +9,7 @@ import Distance from './pages/distance';
 import Currencies from './pages/currencies';
 import Temperature from './pages/temperature';
 import Weight from './pages/weight';
+import Imc from './pages/imc';
 import Home from './pages/home';
 import NotFound from './pages/not-found';
 
@@ -24,6 +25,7 @@ const App = () => {
           <AppLayout exact path="/distance" component={Distance}/>
           <AppLayout exact path="/temperature" component={Temperature}/>
           <AppLayout exact path="/weight" component={Weight}/>
+          <AppLayout exact path="/imc" component={Imc}/>
           <AppLayout component={NotFound}/>
       </Switch>
     </Router>

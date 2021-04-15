@@ -14,7 +14,7 @@ const Home = () => {
       <div className="d-flex align-items-center">
         <div class="d-flex flex-column bd-highlight">
           <div class="bd-highlight">
-            <h2>Convertme</h2>
+            <h1>Convertme</h1>
           </div>
           <div class="bd-highlight">
             <p>

@@ -44,7 +44,7 @@ const Currencies = () => {
   return (
     <div class="container">
       <div class="d-flex justify-content-center" style={{ paddingBottom: "20px" }}>
-        <h2>Conversão de Moedas</h2>
+        <h1>Conversão de Moedas</h1>
       </div>
       <div class="resize d-flex justify-content-center" style={{ paddingBottom: "20px" }}>
         <div class="resize-width d-flex justify-content-center" style={{ width: "30%" }}>
