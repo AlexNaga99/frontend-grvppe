@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import HttpsRedirect from 'react-https-redirect';
+import { CookiesProvider } from 'react-cookie';
 
 ReactDOM.render(
   <React.StrictMode>
-    <HttpsRedirect>
+    <CookiesProvider>
         <App />
-    </HttpsRedirect>
+    </CookiesProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

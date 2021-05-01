@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
 .ant-layout-header{
-    background: #b20835 !important;
+    background: #007cba !important;
     padding: 0 20px !important;
 }
 .logo-icon:hover{
@@ -12,10 +12,8 @@
     background: unset !important;
 }
 .ant-layout-sider-trigger{
-    background: #b20835 !important;
+    background: #007cba !important;
 }
-@media only screen and (max-width: 750px) {
-    .blur{
-        filter: blur(1rem);
-    }
+.ant-layout-content{
+    margin: 0px 20px !important;
 }
