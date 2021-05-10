@@ -61,7 +61,7 @@ const Login = () => {
     <Spin spinning={loading}>
       <Row type="flex" justify="space-around" align="middle" className="login">
         <Col span={6}>
-          <Card bordered={false} title="GRVPPE">
+          <Card bordered={false} title="MovieBD">
             <Input placeholder="Usuário" onChange={e => onChangeLogin(e)} style={{ marginTop: '15px' }}/>
             <Input type="password" placeholder="Senha" onChange={(e) => onChangePassword(e)} style={{ marginTop: '15px' }}/>          
             <Button type="primary" size="large" block htmlType="submit" onClick={handleLogin} style={{ marginTop: '15px' }}>

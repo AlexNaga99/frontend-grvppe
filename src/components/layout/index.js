@@ -12,7 +12,7 @@ const AppLayout = ({ component: Component, ...rest }) => {
       <Layout style={{ minHeight: '100vh' }}>
         <Header className="header">
           <div className="d-flex justify-content-start align-items-center" id="result-pagination">
-            <p style={{ color: "white", fontFamily: 'Montserrat', fontSize: '25px', textAlign: 'left', margin: 'unset' }}>GRVPPE</p>
+            <p style={{ color: "white", fontFamily: 'Montserrat', fontSize: '25px', textAlign: 'left', margin: 'unset' }}>MovieBD</p>
           </div>
         </Header>
         <Layout>

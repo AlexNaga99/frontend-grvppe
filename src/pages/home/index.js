@@ -498,7 +498,7 @@ const Home = () => {
       <div className="home">
         <div class="d-flex flex-column bd-highlight">
           <div class="bd-highlight">
-            <h1>GRVPPE - Frontend</h1>
+            <h1>MovieBD - Frontend</h1>
           </div>
           <div class="bd-highlight">
 
